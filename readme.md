@@ -22,7 +22,7 @@ $ npm install -g folder-profile
 $ sfdx COMMAND
 running command...
 $ sfdx (-v|--version|version)
-folder-profile/0.0.0 win32-x64 node-v14.17.0
+folder-profile/0.0.1 win32-x64 node-v14.17.0
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -30,7 +30,34 @@ USAGE
 ```
 <!-- usagestop -->
 <!-- commands -->
+* [`sfdx folder:profile -s <string> -t <string> [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-folderprofile--s-string--t-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 * [`sfdx hello:org [-n <string>] [-f] [-v <string>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-helloorg--n-string--f--v-string--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
+
+## `sfdx folder:profile -s <string> -t <string> [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
+
+Convert Folder Structure to XML
+
+```
+Convert Folder Structure to XML
+
+USAGE
+  $ sfdx folder:profile -s <string> -t <string> [--json] [--loglevel 
+  trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
+
+OPTIONS
+  -s, --source=source                                                               (required) Source of Profile
+                                                                                    Attributes
+
+  -t, --target=target                                                               (required) Target Folder for
+                                                                                    Generated Profiles
+
+  --json                                                                            format output as json
+
+  --loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL)  [default: warn] logging level for
+                                                                                    this command invocation
+```
+
+_See code: [lib/commands/folder/profile.js](https://github.com/ToddTeese/folder-profile/blob/v0.0.1/lib/commands/folder/profile.js)_
 
 ## `sfdx hello:org [-n <string>] [-f] [-v <string>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -69,6 +96,8 @@ EXAMPLES
   $ sfdx hello:org --name myname --targetusername myOrg@example.com
      Hello myname! This is org: MyOrg and I will be around until Tue Mar 20 2018!
 ```
+
+_See code: [lib/commands/hello/org.js](https://github.com/ToddTeese/folder-profile/blob/v0.0.1/lib/commands/hello/org.js)_
 <!-- commandsstop -->
 <!-- debugging-your-plugin -->
 # Debugging your plugin
