@@ -1,0 +1,7 @@
+{
+    "commandDescription": "Convert Folder Structure to XML",
+    "sourceFlagDescription": "Source of Profile Attributes",
+    "targetFlagDescription": "Target Folder for Generated Profiles",
+    "errorSource": "Source either doesn't exist or you don't have access"
+  }
+  
