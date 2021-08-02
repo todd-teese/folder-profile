@@ -9,6 +9,7 @@
     "@oclif/errors": "^1",
     "@salesforce/command": "^2",
     "@salesforce/core": "^2",
+    "glob-parent": "5.1.2",
     "tslib": "^1"
   },
   "devDependencies": {
