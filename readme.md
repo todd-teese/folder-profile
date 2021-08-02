@@ -58,7 +58,7 @@ $ npm install -g folder-profile
 $ sfdx COMMAND
 running command...
 $ sfdx (-v|--version|version)
-folder-profile/0.0.4 win32-x64 node-v14.17.0
+folder-profile/0.0.5 win32-x64 node-v14.17.0
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -92,5 +92,5 @@ OPTIONS
                                                                                     this command invocation
 ```
 
-_See code: [lib/commands/folder/profile.js](https://github.com/ToddTeese/folder-profile/blob/v0.0.4/lib/commands/folder/profile.js)_
+_See code: [lib/commands/folder/profile.js](https://github.com/ToddTeese/folder-profile/blob/v0.0.5/lib/commands/folder/profile.js)_
 <!-- commandsstop -->
