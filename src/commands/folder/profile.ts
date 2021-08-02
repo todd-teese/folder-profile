@@ -3,7 +3,7 @@ import { Messages, SfdxError } from '@salesforce/core';
 import { AnyJson } from '@salesforce/ts-types';
 import fs = require('fs');
 import {getJsonValues, applyJsonValues} from '../../utils/jsonUtils';
-import {getCsvValues, csvToArray, rowToObject} from '../../utils/csvUtils';
+import {getCsvValues, csvToArray} from '../../utils/csvUtils';
 import {convertProfileToXml} from '../../utils/xmlUtils';
 
 Messages.importMessagesDirectory(__dirname);
