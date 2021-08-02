@@ -16,6 +16,30 @@ folder-profile
 
 <!-- tocstop -->
 <!-- install -->
+
+## Providing an easier way to manage profile changes through source control
+A simple sfdx script to streamline the process of profile creation making use of folder structure, CSV and JSON files.
+
+The script takes a source folder with named subfolders. 
+These subfolders will be the the names of the created Profiles.
+CSV names provide the attribute type name + CSV data provides values.
+JSON is used for single attribute tags. i.e 'custom'
+
+```
+Profiles
+|---Admin
+|   |   fieldPermission.csv
+|   |   objectPermission.csv
+|---Sales User
+|   |   fieldPermission.csv
+|   |   objectPermission.csv
+|   |   layoutAssignment.csv
+|---Marketing User
+|   |   fieldPermission.csv
+|   |   objectPermission.csv
+|   |   otherAttributes.json
+```
+
 <!-- usage -->
 ```sh-session
 $ npm install -g folder-profile
