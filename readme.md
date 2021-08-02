@@ -49,6 +49,9 @@ ProfilesOutput [TARGET]
 |   Marketing User.profile-meta.xml
 ```
 
+## Warning
+- Currently SOURCE and TARGET should both be absolute paths due to the early nature of this project.
+
 <!-- usage -->
 ```sh-session
 $ npm install -g folder-profile
