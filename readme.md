@@ -20,13 +20,13 @@ folder-profile
 ## Providing an easier way to manage profile changes through source control
 A simple sfdx script to streamline the process of profile creation making use of folder structure, CSV and JSON files.
 
-The script takes a source folder with named subfolders. 
-These subfolders will be the the names of the created Profiles.
-CSV names provide the attribute type name + CSV data provides values.
-JSON is used for single attribute tags. i.e 'custom'
+- The script takes a source folder with named subfolders. 
+- These subfolders will be the the names of the created Profiles.
+- CSV names provide the attribute type name + CSV data provides values.
+- JSON is used for single attribute tags. i.e 'custom'
 
 ```
-Profiles
+Profiles [SOURCE]
 |---Admin
 |   |   fieldPermission.csv
 |   |   objectPermission.csv
@@ -38,6 +38,15 @@ Profiles
 |   |   fieldPermission.csv
 |   |   objectPermission.csv
 |   |   otherAttributes.json
+```
+
+Transforms to
+
+```
+ProfilesOutput [TARGET]
+|   Admin.profile-meta.xml
+|   Sales User.profile-meta.xml
+|   Marketing User.profile-meta.xml
 ```
 
 <!-- usage -->
