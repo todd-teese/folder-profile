@@ -1,9 +1,11 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import { Messages, SfdxError } from '@salesforce/core';
 import { AnyJson } from '@salesforce/ts-types';
+
 import fs = require('fs');
-import {getJsonValues, applyJsonValues} from '../../utils/jsonUtils';
-import {getCsvValues, csvToArray} from '../../utils/csvUtils';
+
+import {csvToArray, getCsvValues} from '../../utils/csvUtils';
+import {applyJsonValues, getJsonValues} from '../../utils/jsonUtils';
 import {convertProfileToXml} from '../../utils/xmlUtils';
 
 Messages.importMessagesDirectory(__dirname);
@@ -14,17 +16,21 @@ export default class Profile extends SfdxCommand {
     public static description = messages.getMessage('commandDescription');
 
     protected static flagsConfig = {
-        // flag with a value (-n, --name=VALUE)
-        source: flags.string({char: 's', required:true, description: messages.getMessage('sourceFlagDescription')}),
-        target: flags.string({char: 't', required:true, description: messages.getMessage('targetFlagDescription')})
+        source: flags.string({
+            char: 's',
+            required: true,
+            description: messages.getMessage('sourceFlagDescription')}),
+        target: flags.string({
+            char: 't',
+            required: true,
+            description: messages.getMessage('targetFlagDescription')})
     };
 
-    target:string;
+    private target: string;
 
     public async run(): Promise<AnyJson> {
         const source: string = this.flags.source;
-         this.target = this.flags.target;
-        // see if source is good,
+        this.target = this.flags.target;
         if(!await this.hasAccess(source)) {
             throw new SfdxError(messages.getMessage('errorSource'));
         }
@@ -65,14 +71,16 @@ export default class Profile extends SfdxCommand {
         } catch (error) {
             canAccess = false;
         }
+
+        if(fs.statSync(path).isFile()) {
+            return;
+        }
     
-        if(canAccess) {
+        if(canAccess && !fs.statSync(path).isFile()) {
             let profileFiles;
-            try {
-                profileFiles = fs.readdirSync(path);
-            } catch (error) {
-                throw new SfdxError('Attempted to read a file as Directory');
-            }
+
+            profileFiles = fs.readdirSync(path);
+
             let profileValue = {};
             for(let i = 0; i < profileFiles.length; i++) {
                 const file = profileFiles[i];

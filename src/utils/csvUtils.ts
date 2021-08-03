@@ -1,6 +1,6 @@
+import csvParse = require('csv-parse');
 import fs = require('fs');
-const getStream = require('get-stream');
-const csvParse = require('csv-parse');
+import getStream = require('get-stream');
 
 async function getCsvValues(path) {
     const parse = csvParse({delimiter: ','});
@@ -10,10 +10,9 @@ async function getCsvValues(path) {
 
 function csvToArray(csvValues) {
     let header;
-    let values = [];
-    for(let i = 0; i < csvValues.length; i++) {
-        const row = csvValues[i];
-        if(!header) {
+    const values = [];
+    for (const row of csvValues) {
+        if (!header) {
             header = row;
         } else {
             values.push(rowToObject(header, row));
@@ -23,8 +22,8 @@ function csvToArray(csvValues) {
 }
 
 function rowToObject(header, row) {
-    let value = {};
-    for(let i = 0; i < header.length; i++) {
+    const value = {};
+    for (let i = 0; i < header.length; i++) {
         value[header[i]] = row[i];
     }
     return value;
@@ -32,4 +31,4 @@ function rowToObject(header, row) {
 
 export {
     getCsvValues, csvToArray, rowToObject
-}
+};
