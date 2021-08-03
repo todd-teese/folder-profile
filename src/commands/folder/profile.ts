@@ -67,7 +67,12 @@ export default class Profile extends SfdxCommand {
         }
     
         if(canAccess) {
-            let profileFiles = fs.readdirSync(path);
+            let profileFiles;
+            try {
+                profileFiles = fs.readdirSync(path);
+            } catch (error) {
+                throw new SfdxError('Attempted to read a file as Directory');
+            }
             let profileValue = {};
             for(let i = 0; i < profileFiles.length; i++) {
                 const file = profileFiles[i];

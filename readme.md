@@ -15,6 +15,8 @@ folder-profile
 <!-- toc -->
 
 <!-- tocstop -->
+
+<!-- tocstop -->
 <!-- install -->
 
 ## Providing an easier way to manage profile changes through source control
@@ -58,6 +60,18 @@ $ npm install -g folder-profile
 $ sfdx COMMAND
 running command...
 $ sfdx (-v|--version|version)
+folder-profile/0.0.10 win32-x64 node-v14.17.0
+$ sfdx --help [COMMAND]
+USAGE
+  $ sfdx COMMAND
+...
+```
+<!-- usagestop -->
+```sh-session
+$ npm install -g folder-profile
+$ sfdx COMMAND
+running command...
+$ sfdx (-v|--version|version)
 folder-profile/0.0.5 win32-x64 node-v14.17.0
 $ sfdx --help [COMMAND]
 USAGE
@@ -66,6 +80,34 @@ USAGE
 ```
 <!-- usagestop -->
 <!-- commands -->
+* [`sfdx folder:profile -s <string> -t <string> [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-folderprofile--s-string--t-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
+
+## `sfdx folder:profile -s <string> -t <string> [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
+
+Convert Folder Structure to XML
+
+```
+Convert Folder Structure to XML
+
+USAGE
+  $ sfdx folder:profile -s <string> -t <string> [--json] [--loglevel 
+  trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
+
+OPTIONS
+  -s, --source=source                                                               (required) Source of Profile
+                                                                                    Attributes
+
+  -t, --target=target                                                               (required) Target Folder for
+                                                                                    Generated Profiles
+
+  --json                                                                            format output as json
+
+  --loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL)  [default: warn] logging level for
+                                                                                    this command invocation
+```
+
+_See code: [lib/commands/folder/profile.js](https://github.com/ToddTeese/folder-profile/blob/v0.0.10/lib/commands/folder/profile.js)_
+<!-- commandsstop -->
 * [`sfdx folder:profile -s <string> -t <string> [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-folderprofile--s-string--t-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 
 ## `sfdx folder:profile -s <string> -t <string> [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`

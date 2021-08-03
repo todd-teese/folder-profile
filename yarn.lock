@@ -272,7 +272,7 @@
     chalk "^2.4.2"
     cli-ux "^4.9.3"
 
-"@salesforce/core@^2", "@salesforce/core@^2.1.4":
+"@salesforce/core@^2.1.4", "@salesforce/core@^2.27.0":
   version "2.27.0"
   resolved "https://registry.yarnpkg.com/@salesforce/core/-/core-2.27.0.tgz#47c036a5195839cd0efae4b3f61e551274ff66a0"
   integrity sha512-T+fAkcSVCWn8OC/hJ5cJT1wWwUYzhQIc8xhKA3K/yLib5Y2WV9goD9D+35oZqikJRkHGiKv2uN9DsR4ip4WwXg==
@@ -1513,6 +1513,11 @@ get-stream@^5.1.0:
   integrity sha512-nBF+F1rAZVCu/p7rjzgA+Yb4lfYXrpl7a6VmJrU8wF9I1CKvP/QwPNZHnOlwbTkY6dvtFIzFMSyQXbLoTQPRpA==
   dependencies:
     pump "^3.0.0"
+
+get-stream@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-6.0.1.tgz#a262d8eef67aced57c2852ad6167526a43cbf7b7"
+  integrity sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==
 
 get-value@^2.0.3, get-value@^2.0.6:
   version "2.0.6"
