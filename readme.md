@@ -10,15 +10,6 @@ folder-profile
 [![Downloads/week](https://img.shields.io/npm/dw/folder-profile.svg)](https://npmjs.org/package/folder-profile)
 [![License](https://img.shields.io/npm/l/folder-profile.svg)](https://github.com/ToddTeese/folder-profile/blob/master/package.json)
 
-<!-- toc -->
-
-<!-- tocstop -->
-
-<!-- tocstop -->
-
-<!-- tocstop -->
-<!-- install -->
-
 ## Providing an easier way to manage profile changes through source control
 A simple sfdx script to streamline the process of profile creation making use of folder structure, CSV and JSON files.
 
@@ -54,10 +45,9 @@ ProfilesOutput [TARGET]
 ## Warning
 - Currently SOURCE and TARGET should both be absolute paths due to the early nature of this project.
 
-<!-- usage -->
 ```sh-session
-$ npm install -g folder-profile
-$ sfdx COMMAND
+$ sfdx plugins:install folder-profile
+$ sfdx folder:profile -s [SOURCE] -t [TARGET]
 running command...
 $ sfdx (-v|--version|version)
 folder-profile/0.1.3 win32-x64 node-v14.17.4
@@ -66,20 +56,7 @@ USAGE
   $ sfdx COMMAND
 ...
 ```
-<!-- usagestop -->
-```sh-session
-$ npm install -g folder-profile
-$ sfdx COMMAND
-running command...
-$ sfdx (-v|--version|version)
-folder-profile/0.1.2 win32-x64 node-v14.17.4
-$ sfdx --help [COMMAND]
-USAGE
-  $ sfdx COMMAND
-...
-```
-<!-- usagestop -->
-<!-- commands -->
+
 * [`sfdx folder:profile -s <string> -t <string> [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-folderprofile--s-string--t-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 
 ## `sfdx folder:profile -s <string> -t <string> [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
@@ -107,32 +84,3 @@ OPTIONS
 ```
 
 _See code: [lib/commands/folder/profile.js](https://github.com/ToddTeese/folder-profile/blob/v0.1.3/lib/commands/folder/profile.js)_
-<!-- commandsstop -->
-* [`sfdx folder:profile -s <string> -t <string> [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-folderprofile--s-string--t-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
-
-## `sfdx folder:profile -s <string> -t <string> [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
-
-Convert Folder Structure to XML
-
-```
-Convert Folder Structure to XML
-
-USAGE
-  $ sfdx folder:profile -s <string> -t <string> [--json] [--loglevel 
-  trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
-
-OPTIONS
-  -s, --source=source                                                               (required) Source of Profile
-                                                                                    Attributes
-
-  -t, --target=target                                                               (required) Target Folder for
-                                                                                    Generated Profiles
-
-  --json                                                                            format output as json
-
-  --loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL)  [default: warn] logging level for
-                                                                                    this command invocation
-```
-
-_See code: [lib/commands/folder/profile.js](https://github.com/ToddTeese/folder-profile/blob/v0.1.2/lib/commands/folder/profile.js)_
-<!-- commandsstop -->
