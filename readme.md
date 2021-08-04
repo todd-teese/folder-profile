@@ -1,8 +1,6 @@
 folder-profile
 ==============
 
-
-
 [![Version](https://img.shields.io/npm/v/folder-profile.svg)](https://npmjs.org/package/folder-profile)
 [![CircleCI](https://circleci.com/gh/ToddTeese/folder-profile/tree/master.svg?style=shield)](https://circleci.com/gh/ToddTeese/folder-profile/tree/master)
 [![Appveyor CI](https://ci.appveyor.com/api/projects/status/github/ToddTeese/folder-profile?branch=master&svg=true)](https://ci.appveyor.com/project/heroku/folder-profile/branch/master)
@@ -13,6 +11,8 @@ folder-profile
 [![License](https://img.shields.io/npm/l/folder-profile.svg)](https://github.com/ToddTeese/folder-profile/blob/master/package.json)
 
 <!-- toc -->
+
+<!-- tocstop -->
 
 <!-- tocstop -->
 
@@ -60,7 +60,7 @@ $ npm install -g folder-profile
 $ sfdx COMMAND
 running command...
 $ sfdx (-v|--version|version)
-folder-profile/0.1.1 win32-x64 node-v14.17.0
+folder-profile/0.1.3 win32-x64 node-v14.17.4
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -72,7 +72,7 @@ $ npm install -g folder-profile
 $ sfdx COMMAND
 running command...
 $ sfdx (-v|--version|version)
-folder-profile/0.0.5 win32-x64 node-v14.17.0
+folder-profile/0.1.2 win32-x64 node-v14.17.4
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -106,7 +106,7 @@ OPTIONS
                                                                                     this command invocation
 ```
 
-_See code: [lib/commands/folder/profile.js](https://github.com/ToddTeese/folder-profile/blob/v0.1.1/lib/commands/folder/profile.js)_
+_See code: [lib/commands/folder/profile.js](https://github.com/ToddTeese/folder-profile/blob/v0.1.3/lib/commands/folder/profile.js)_
 <!-- commandsstop -->
 * [`sfdx folder:profile -s <string> -t <string> [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-folderprofile--s-string--t-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 
@@ -134,5 +134,5 @@ OPTIONS
                                                                                     this command invocation
 ```
 
-_See code: [lib/commands/folder/profile.js](https://github.com/ToddTeese/folder-profile/blob/v0.0.5/lib/commands/folder/profile.js)_
+_See code: [lib/commands/folder/profile.js](https://github.com/ToddTeese/folder-profile/blob/v0.1.2/lib/commands/folder/profile.js)_
 <!-- commandsstop -->
