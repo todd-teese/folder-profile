@@ -59,7 +59,7 @@ export default class Profile extends SfdxCommand {
         if (this.hasAccess(path)) {
             const profileDirectories = fs.readdirSync(path);
             for (const directory of profileDirectories) {
-                this.getProfileFiles( path + '\\' + directory, directory).catch(error => {
+                this.getProfileFiles( path + '/' + directory, directory).catch(error => {
                     console.error(error);
                     throw new SfdxError('Error in Profile Generation');
                 });
@@ -88,12 +88,12 @@ export default class Profile extends SfdxCommand {
                 const fileType = file.substring(file.lastIndexOf('.'));
                 const attribute = file.substring(0, file.lastIndexOf('.'));
                 if (fileType === '.csv') {
-                    const csvData = await getCsvValues(path + '\\' + file);
+                    const csvData = await getCsvValues(path + '/' + file);
                     const attributeArray = csvToArray(csvData);
                     profileValue[attribute] = attributeArray;
                 }
                 if (fileType === '.json') {
-                    const jsonData = await getJsonValues(path + '\\' + file);
+                    const jsonData = await getJsonValues(path + '/' + file);
                     if (jsonData) {
                         applyJsonValues(jsonData, profileValue);
                     }

@@ -26,7 +26,7 @@ async function convertProfileToXml(profileName, profile, xmlDirectory) {
         fs.mkdirSync(xmlDirectory);
     }
 
-    fs.writeFileSync(xmlDirectory + '\\' + profileName + '.profile-meta' + '.xml', xml);
+    fs.writeFileSync(xmlDirectory + '/' + profileName + '.profile-meta' + '.xml', xml);
 }
 
 export {

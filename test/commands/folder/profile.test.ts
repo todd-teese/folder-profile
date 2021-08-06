@@ -4,13 +4,13 @@ import fs = require('fs');
 const objectPermissions = 'object,enabled\ntestObject,true';
 const otherAttributes = '{"custom":true}';
 
-const testPath = '.\\TestProfiles';
-const testPathAdmin = '.\\TestProfiles\\Admin';
-const testPathAdminObjectPermissions = '.\\TestProfiles\\Admin\\objectPermissions.csv';
-const testPathAdminOtherAttributes = '.\\TestProfiles\\Admin\\otherAttributes.json';
+const testPath = './TestProfiles';
+const testPathAdmin = './TestProfiles\\Admin';
+const testPathAdminObjectPermissions = './TestProfiles\\Admin\\objectPermissions.csv';
+const testPathAdminOtherAttributes = './TestProfiles\\Admin\\otherAttributes.json';
 
-const testOutputPath = '.\\TestProfilesOutput';
-const testOutputAdminPath = '.\\TestProfilesOutput\\Admin.profile-meta.xml';
+const testOutputPath = './TestProfilesOutput';
+const testOutputAdminPath = './TestProfilesOutput\\Admin.profile-meta.xml';
 
 describe('Hooks', () => {
     before(async () => {
